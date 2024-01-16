@@ -1,0 +1,3 @@
+2024-01-14 12:53:50,731 ERROR frappe New Exception collected in error log
+Site: site1.local
+Form Dict: {'cmd': 'frappe.www.login.send_login_link', 'email': 'rishikesh11599@gmail.com'}

@@ -1,0 +1,636 @@
+Backup failed for Site site1.local. Database or site_config.json may be corrupted
+Traceback with variables (most recent call last):
+  File "apps/frappe/frappe/commands/site.py", line 894, in backup
+    odb = scheduled_backup(
+      context = {'sites': ['site1.local'], 'force': False, 'verbose': True, 'profile': False}
+      with_files = False
+      backup_path = None
+      backup_path_db = None
+      backup_path_files = None
+      backup_path_private_files = None
+      backup_path_conf = None
+      ignore_backup_conf = False
+      verbose = True
+      compress = False
+      include = ''
+      exclude = ''
+      scheduled_backup = <function scheduled_backup at 0x10b4a24d0>
+      exit_code = 0
+      site = 'site1.local'
+  File "apps/frappe/frappe/utils/backups.py", line 547, in scheduled_backup
+    return new_backup(
+      older_than = 6
+      ignore_files = True
+      backup_path = None
+      backup_path_db = None
+      backup_path_files = None
+      backup_path_private_files = None
+      backup_path_conf = None
+      ignore_conf = False
+      include_doctypes = ''
+      exclude_doctypes = ''
+      compress = False
+      force = True
+      verbose = True
+  File "apps/frappe/frappe/utils/backups.py", line 598, in new_backup
+    odb.get_backup(older_than, ignore_files, force=force)
+      older_than = 6
+      ignore_files = True
+      backup_path = None
+      backup_path_db = None
+      backup_path_files = None
+      backup_path_private_files = None
+      backup_path_conf = None
+      ignore_conf = False
+      include_doctypes = ''
+      exclude_doctypes = ''
+      compress = False
+      force = True
+      verbose = True
+      odb = <frappe.utils.backups.BackupGenerator object at 0x10b82f6d0>
+  File "apps/frappe/frappe/utils/backups.py", line 186, in get_backup
+    self.take_dump()
+      self = <frappe.utils.backups.BackupGenerator object at 0x10b82f6d0>
+      older_than = 6
+      ignore_files = True
+      force = True
+      last_db = False
+      last_file = False
+      last_private_file = False
+      site_config_backup_path = False
+  File "apps/frappe/frappe/utils/backups.py", line 391, in take_dump
+    db_exc = self.get_db_dump_exeuctable()
+      get_app_branch = <function get_app_branch at 0x10ca97b50>
+      frappe = <module 'frappe' from 'apps/frappe/frappe/__init__.py'>
+      self = <frappe.utils.backups.BackupGenerator object at 0x10b82f6d0>
+  File "apps/frappe/frappe/utils/backups.py", line 381, in get_db_dump_exeuctable
+    frappe.throw(
+      self = <frappe.utils.backups.BackupGenerator object at 0x10b82f6d0>
+      db_exc = 'mysqldump'
+      exists = False
+      mariadb_dump_path = None
+  File "apps/frappe/frappe/__init__.py", line 577, in throw
+    msgprint(
+      msg = 'mysqldump not found in PATH! This is required to take a backup.'
+      exc = <class 'frappe.exceptions.ExecutableNotFound'>
+      title = None
+      is_minimizable = False
+      wide = False
+      as_list = False
+  File "apps/frappe/frappe/__init__.py", line 549, in msgprint
+    _raise_exception()
+      title = None
+      as_table = False
+      as_list = False
+      indicator = 'red'
+      alert = False
+      primary_action = None
+      is_minimizable = False
+      wide = False
+      realtime = False
+      sys = <module 'sys' (built-in)>
+      _raise_exception = <function msgprint.<locals>._raise_exception at 0x10ca97e20>
+      _strip_html_tags = <functools._lru_cache_wrapper object at 0x10ca9ab90>
+      inspect = <module 'inspect' from '/usr/local/Cellar/python@3.10/3.10.13_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/inspect.py'>
+      msg = 'mysqldump not found in PATH! This is required to take a backup.'
+      out = {'message': 'mysqldump not found in PATH! This is required to take a backup.', 'title': 'Message', 'indicator': 'red', 'raise_exception': 1, '__frappe_exc_id': 'c68f57a61c00127313456ba3e4ebefd068fb1bd1bca11fc93300f9b1'}
+      raise_exception = <class 'frappe.exceptions.ExecutableNotFound'>
+      strip_html_tags = <function strip_html_tags at 0x10aa0cc10>
+  File "apps/frappe/frappe/__init__.py", line 500, in _raise_exception
+    raise exc
+      exc = ExecutableNotFound('mysqldump not found in PATH! This is required to take a backup.')
+      inspect = <module 'inspect' from '/usr/local/Cellar/python@3.10/3.10.13_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/inspect.py'>
+      msg = 'mysqldump not found in PATH! This is required to take a backup.'
+      out = {'message': 'mysqldump not found in PATH! This is required to take a backup.', 'title': 'Message', 'indicator': 'red', 'raise_exception': 1, '__frappe_exc_id': 'c68f57a61c00127313456ba3e4ebefd068fb1bd1bca11fc93300f9b1'}
+      raise_exception = <class 'frappe.exceptions.ExecutableNotFound'>
+frappe.exceptions.ExecutableNotFound: mysqldump not found in PATH! This is required to take a backup.
+Backup failed for Site site1.local. Database or site_config.json may be corrupted
+Traceback with variables (most recent call last):
+  File "apps/frappe/frappe/commands/site.py", line 894, in backup
+    odb = scheduled_backup(
+      context = {'sites': ['site1.local'], 'force': False, 'verbose': True, 'profile': False}
+      with_files = False
+      backup_path = None
+      backup_path_db = None
+      backup_path_files = None
+      backup_path_private_files = None
+      backup_path_conf = None
+      ignore_backup_conf = False
+      verbose = True
+      compress = False
+      include = ''
+      exclude = ''
+      scheduled_backup = <function scheduled_backup at 0x10a2de4d0>
+      exit_code = 0
+      site = 'site1.local'
+  File "apps/frappe/frappe/utils/backups.py", line 547, in scheduled_backup
+    return new_backup(
+      older_than = 6
+      ignore_files = True
+      backup_path = None
+      backup_path_db = None
+      backup_path_files = None
+      backup_path_private_files = None
+      backup_path_conf = None
+      ignore_conf = False
+      include_doctypes = ''
+      exclude_doctypes = ''
+      compress = False
+      force = True
+      verbose = True
+  File "apps/frappe/frappe/utils/backups.py", line 598, in new_backup
+    odb.get_backup(older_than, ignore_files, force=force)
+      older_than = 6
+      ignore_files = True
+      backup_path = None
+      backup_path_db = None
+      backup_path_files = None
+      backup_path_private_files = None
+      backup_path_conf = None
+      ignore_conf = False
+      include_doctypes = ''
+      exclude_doctypes = ''
+      compress = False
+      force = True
+      verbose = True
+      odb = <frappe.utils.backups.BackupGenerator object at 0x10a6c3d00>
+  File "apps/frappe/frappe/utils/backups.py", line 186, in get_backup
+    self.take_dump()
+      self = <frappe.utils.backups.BackupGenerator object at 0x10a6c3d00>
+      older_than = 6
+      ignore_files = True
+      force = True
+      last_db = False
+      last_file = False
+      last_private_file = False
+      site_config_backup_path = False
+  File "apps/frappe/frappe/utils/backups.py", line 391, in take_dump
+    db_exc = self.get_db_dump_exeuctable()
+      get_app_branch = <function get_app_branch at 0x10c7404c0>
+      frappe = <module 'frappe' from 'apps/frappe/frappe/__init__.py'>
+      self = <frappe.utils.backups.BackupGenerator object at 0x10a6c3d00>
+  File "apps/frappe/frappe/utils/backups.py", line 381, in get_db_dump_exeuctable
+    frappe.throw(
+      self = <frappe.utils.backups.BackupGenerator object at 0x10a6c3d00>
+      db_exc = 'mysqldump'
+      exists = False
+      mariadb_dump_path = None
+  File "apps/frappe/frappe/__init__.py", line 577, in throw
+    msgprint(
+      msg = 'mysqldump not found in PATH! This is required to take a backup.'
+      exc = <class 'frappe.exceptions.ExecutableNotFound'>
+      title = None
+      is_minimizable = False
+      wide = False
+      as_list = False
+  File "apps/frappe/frappe/__init__.py", line 549, in msgprint
+    _raise_exception()
+      title = None
+      as_table = False
+      as_list = False
+      indicator = 'red'
+      alert = False
+      primary_action = None
+      is_minimizable = False
+      wide = False
+      realtime = False
+      sys = <module 'sys' (built-in)>
+      _raise_exception = <function msgprint.<locals>._raise_exception at 0x10c7abd00>
+      _strip_html_tags = <functools._lru_cache_wrapper object at 0x10c74f7f0>
+      inspect = <module 'inspect' from '/usr/local/Cellar/python@3.10/3.10.13_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/inspect.py'>
+      msg = 'mysqldump not found in PATH! This is required to take a backup.'
+      out = {'message': 'mysqldump not found in PATH! This is required to take a backup.', 'title': 'Message', 'indicator': 'red', 'raise_exception': 1, '__frappe_exc_id': '9e6edb95fc1d3978a5cf35fd3dc69a4d90c4da631c93bd34d2605ca6'}
+      raise_exception = <class 'frappe.exceptions.ExecutableNotFound'>
+      strip_html_tags = <function strip_html_tags at 0x109344c10>
+  File "apps/frappe/frappe/__init__.py", line 500, in _raise_exception
+    raise exc
+      exc = ExecutableNotFound('mysqldump not found in PATH! This is required to take a backup.')
+      inspect = <module 'inspect' from '/usr/local/Cellar/python@3.10/3.10.13_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/inspect.py'>
+      msg = 'mysqldump not found in PATH! This is required to take a backup.'
+      out = {'message': 'mysqldump not found in PATH! This is required to take a backup.', 'title': 'Message', 'indicator': 'red', 'raise_exception': 1, '__frappe_exc_id': '9e6edb95fc1d3978a5cf35fd3dc69a4d90c4da631c93bd34d2605ca6'}
+      raise_exception = <class 'frappe.exceptions.ExecutableNotFound'>
+frappe.exceptions.ExecutableNotFound: mysqldump not found in PATH! This is required to take a backup.
+Backup failed for Site site1.local. Database or site_config.json may be corrupted
+Traceback with variables (most recent call last):
+  File "apps/frappe/frappe/commands/site.py", line 894, in backup
+    odb = scheduled_backup(
+      context = {'sites': ['site1.local'], 'force': False, 'verbose': True, 'profile': False}
+      with_files = False
+      backup_path = None
+      backup_path_db = None
+      backup_path_files = None
+      backup_path_private_files = None
+      backup_path_conf = None
+      ignore_backup_conf = False
+      verbose = True
+      compress = False
+      include = ''
+      exclude = ''
+      scheduled_backup = <function scheduled_backup at 0x10db664d0>
+      exit_code = 0
+      site = 'site1.local'
+  File "apps/frappe/frappe/utils/backups.py", line 547, in scheduled_backup
+    return new_backup(
+      older_than = 6
+      ignore_files = True
+      backup_path = None
+      backup_path_db = None
+      backup_path_files = None
+      backup_path_private_files = None
+      backup_path_conf = None
+      ignore_conf = False
+      include_doctypes = ''
+      exclude_doctypes = ''
+      compress = False
+      force = True
+      verbose = True
+  File "apps/frappe/frappe/utils/backups.py", line 598, in new_backup
+    odb.get_backup(older_than, ignore_files, force=force)
+      older_than = 6
+      ignore_files = True
+      backup_path = None
+      backup_path_db = None
+      backup_path_files = None
+      backup_path_private_files = None
+      backup_path_conf = None
+      ignore_conf = False
+      include_doctypes = ''
+      exclude_doctypes = ''
+      compress = False
+      force = True
+      verbose = True
+      odb = <frappe.utils.backups.BackupGenerator object at 0x10dee7d00>
+  File "apps/frappe/frappe/utils/backups.py", line 186, in get_backup
+    self.take_dump()
+      self = <frappe.utils.backups.BackupGenerator object at 0x10dee7d00>
+      older_than = 6
+      ignore_files = True
+      force = True
+      last_db = False
+      last_file = False
+      last_private_file = False
+      site_config_backup_path = False
+  File "apps/frappe/frappe/utils/backups.py", line 391, in take_dump
+    db_exc = self.get_db_dump_exeuctable()
+      get_app_branch = <function get_app_branch at 0x10ffac4c0>
+      frappe = <module 'frappe' from 'apps/frappe/frappe/__init__.py'>
+      self = <frappe.utils.backups.BackupGenerator object at 0x10dee7d00>
+  File "apps/frappe/frappe/utils/backups.py", line 381, in get_db_dump_exeuctable
+    frappe.throw(
+      self = <frappe.utils.backups.BackupGenerator object at 0x10dee7d00>
+      db_exc = 'mysqldump'
+      exists = False
+      mariadb_dump_path = None
+  File "apps/frappe/frappe/__init__.py", line 577, in throw
+    msgprint(
+      msg = 'mysqldump not found in PATH! This is required to take a backup.'
+      exc = <class 'frappe.exceptions.ExecutableNotFound'>
+      title = None
+      is_minimizable = False
+      wide = False
+      as_list = False
+  File "apps/frappe/frappe/__init__.py", line 549, in msgprint
+    _raise_exception()
+      title = None
+      as_table = False
+      as_list = False
+      indicator = 'red'
+      alert = False
+      primary_action = None
+      is_minimizable = False
+      wide = False
+      realtime = False
+      sys = <module 'sys' (built-in)>
+      _raise_exception = <function msgprint.<locals>._raise_exception at 0x110013d00>
+      _strip_html_tags = <functools._lru_cache_wrapper object at 0x10ffbb7f0>
+      inspect = <module 'inspect' from '/usr/local/Cellar/python@3.10/3.10.13_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/inspect.py'>
+      msg = 'mysqldump not found in PATH! This is required to take a backup.'
+      out = {'message': 'mysqldump not found in PATH! This is required to take a backup.', 'title': 'Message', 'indicator': 'red', 'raise_exception': 1, '__frappe_exc_id': 'ca58b0028cd6d91feff695d3d8bbe7074bfc3bb482efcdde7232920d'}
+      raise_exception = <class 'frappe.exceptions.ExecutableNotFound'>
+      strip_html_tags = <function strip_html_tags at 0x10d0c4c10>
+  File "apps/frappe/frappe/__init__.py", line 500, in _raise_exception
+    raise exc
+      exc = ExecutableNotFound('mysqldump not found in PATH! This is required to take a backup.')
+      inspect = <module 'inspect' from '/usr/local/Cellar/python@3.10/3.10.13_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/inspect.py'>
+      msg = 'mysqldump not found in PATH! This is required to take a backup.'
+      out = {'message': 'mysqldump not found in PATH! This is required to take a backup.', 'title': 'Message', 'indicator': 'red', 'raise_exception': 1, '__frappe_exc_id': 'ca58b0028cd6d91feff695d3d8bbe7074bfc3bb482efcdde7232920d'}
+      raise_exception = <class 'frappe.exceptions.ExecutableNotFound'>
+frappe.exceptions.ExecutableNotFound: mysqldump not found in PATH! This is required to take a backup.
+Backup failed for Site site1.local. Database or site_config.json may be corrupted
+Traceback with variables (most recent call last):
+  File "apps/frappe/frappe/commands/site.py", line 894, in backup
+    odb = scheduled_backup(
+      context = {'sites': ['site1.local'], 'force': False, 'verbose': True, 'profile': False}
+      with_files = False
+      backup_path = None
+      backup_path_db = None
+      backup_path_files = None
+      backup_path_private_files = None
+      backup_path_conf = None
+      ignore_backup_conf = False
+      verbose = True
+      compress = False
+      include = ''
+      exclude = ''
+      scheduled_backup = <function scheduled_backup at 0x10415e4d0>
+      exit_code = 0
+      site = 'site1.local'
+  File "apps/frappe/frappe/utils/backups.py", line 547, in scheduled_backup
+    return new_backup(
+      older_than = 6
+      ignore_files = True
+      backup_path = None
+      backup_path_db = None
+      backup_path_files = None
+      backup_path_private_files = None
+      backup_path_conf = None
+      ignore_conf = False
+      include_doctypes = ''
+      exclude_doctypes = ''
+      compress = False
+      force = True
+      verbose = True
+  File "apps/frappe/frappe/utils/backups.py", line 598, in new_backup
+    odb.get_backup(older_than, ignore_files, force=force)
+      older_than = 6
+      ignore_files = True
+      backup_path = None
+      backup_path_db = None
+      backup_path_files = None
+      backup_path_private_files = None
+      backup_path_conf = None
+      ignore_conf = False
+      include_doctypes = ''
+      exclude_doctypes = ''
+      compress = False
+      force = True
+      verbose = True
+      odb = <frappe.utils.backups.BackupGenerator object at 0x1044dfd00>
+  File "apps/frappe/frappe/utils/backups.py", line 186, in get_backup
+    self.take_dump()
+      self = <frappe.utils.backups.BackupGenerator object at 0x1044dfd00>
+      older_than = 6
+      ignore_files = True
+      force = True
+      last_db = False
+      last_file = False
+      last_private_file = False
+      site_config_backup_path = False
+  File "apps/frappe/frappe/utils/backups.py", line 391, in take_dump
+    db_exc = self.get_db_dump_exeuctable()
+      get_app_branch = <function get_app_branch at 0x1065a04c0>
+      frappe = <module 'frappe' from 'apps/frappe/frappe/__init__.py'>
+      self = <frappe.utils.backups.BackupGenerator object at 0x1044dfd00>
+  File "apps/frappe/frappe/utils/backups.py", line 381, in get_db_dump_exeuctable
+    frappe.throw(
+      self = <frappe.utils.backups.BackupGenerator object at 0x1044dfd00>
+      db_exc = 'mysqldump'
+      exists = False
+      mariadb_dump_path = None
+  File "apps/frappe/frappe/__init__.py", line 577, in throw
+    msgprint(
+      msg = 'mysqldump not found in PATH! This is required to take a backup.'
+      exc = <class 'frappe.exceptions.ExecutableNotFound'>
+      title = None
+      is_minimizable = False
+      wide = False
+      as_list = False
+  File "apps/frappe/frappe/__init__.py", line 549, in msgprint
+    _raise_exception()
+      title = None
+      as_table = False
+      as_list = False
+      indicator = 'red'
+      alert = False
+      primary_action = None
+      is_minimizable = False
+      wide = False
+      realtime = False
+      sys = <module 'sys' (built-in)>
+      _raise_exception = <function msgprint.<locals>._raise_exception at 0x10660bd00>
+      _strip_html_tags = <functools._lru_cache_wrapper object at 0x1065af7f0>
+      inspect = <module 'inspect' from '/usr/local/Cellar/python@3.10/3.10.13_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/inspect.py'>
+      msg = 'mysqldump not found in PATH! This is required to take a backup.'
+      out = {'message': 'mysqldump not found in PATH! This is required to take a backup.', 'title': 'Message', 'indicator': 'red', 'raise_exception': 1, '__frappe_exc_id': '59d2e630a0b94b37ba1791f2b347c84ef6ebfe0a7417c9dd1fabb328'}
+      raise_exception = <class 'frappe.exceptions.ExecutableNotFound'>
+      strip_html_tags = <function strip_html_tags at 0x1036bcc10>
+  File "apps/frappe/frappe/__init__.py", line 500, in _raise_exception
+    raise exc
+      exc = ExecutableNotFound('mysqldump not found in PATH! This is required to take a backup.')
+      inspect = <module 'inspect' from '/usr/local/Cellar/python@3.10/3.10.13_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/inspect.py'>
+      msg = 'mysqldump not found in PATH! This is required to take a backup.'
+      out = {'message': 'mysqldump not found in PATH! This is required to take a backup.', 'title': 'Message', 'indicator': 'red', 'raise_exception': 1, '__frappe_exc_id': '59d2e630a0b94b37ba1791f2b347c84ef6ebfe0a7417c9dd1fabb328'}
+      raise_exception = <class 'frappe.exceptions.ExecutableNotFound'>
+frappe.exceptions.ExecutableNotFound: mysqldump not found in PATH! This is required to take a backup.
+Backup failed for Site site1.local. Database or site_config.json may be corrupted
+Traceback with variables (most recent call last):
+  File "apps/frappe/frappe/commands/site.py", line 894, in backup
+    odb = scheduled_backup(
+      context = {'sites': ['site1.local', 'test-site-1'], 'force': False, 'verbose': True, 'profile': False}
+      with_files = False
+      backup_path = None
+      backup_path_db = None
+      backup_path_files = None
+      backup_path_private_files = None
+      backup_path_conf = None
+      ignore_backup_conf = False
+      verbose = True
+      compress = False
+      include = ''
+      exclude = ''
+      scheduled_backup = <function scheduled_backup at 0x10899a4d0>
+      exit_code = 0
+      site = 'site1.local'
+  File "apps/frappe/frappe/utils/backups.py", line 547, in scheduled_backup
+    return new_backup(
+      older_than = 6
+      ignore_files = True
+      backup_path = None
+      backup_path_db = None
+      backup_path_files = None
+      backup_path_private_files = None
+      backup_path_conf = None
+      ignore_conf = False
+      include_doctypes = ''
+      exclude_doctypes = ''
+      compress = False
+      force = True
+      verbose = True
+  File "apps/frappe/frappe/utils/backups.py", line 598, in new_backup
+    odb.get_backup(older_than, ignore_files, force=force)
+      older_than = 6
+      ignore_files = True
+      backup_path = None
+      backup_path_db = None
+      backup_path_files = None
+      backup_path_private_files = None
+      backup_path_conf = None
+      ignore_conf = False
+      include_doctypes = ''
+      exclude_doctypes = ''
+      compress = False
+      force = True
+      verbose = True
+      odb = <frappe.utils.backups.BackupGenerator object at 0x108d176d0>
+  File "apps/frappe/frappe/utils/backups.py", line 186, in get_backup
+    self.take_dump()
+      self = <frappe.utils.backups.BackupGenerator object at 0x108d176d0>
+      older_than = 6
+      ignore_files = True
+      force = True
+      last_db = False
+      last_file = False
+      last_private_file = False
+      site_config_backup_path = False
+  File "apps/frappe/frappe/utils/backups.py", line 391, in take_dump
+    db_exc = self.get_db_dump_exeuctable()
+      get_app_branch = <function get_app_branch at 0x109f73b50>
+      frappe = <module 'frappe' from 'apps/frappe/frappe/__init__.py'>
+      self = <frappe.utils.backups.BackupGenerator object at 0x108d176d0>
+  File "apps/frappe/frappe/utils/backups.py", line 381, in get_db_dump_exeuctable
+    frappe.throw(
+      self = <frappe.utils.backups.BackupGenerator object at 0x108d176d0>
+      db_exc = 'mysqldump'
+      exists = False
+      mariadb_dump_path = None
+  File "apps/frappe/frappe/__init__.py", line 577, in throw
+    msgprint(
+      msg = 'mysqldump not found in PATH! This is required to take a backup.'
+      exc = <class 'frappe.exceptions.ExecutableNotFound'>
+      title = None
+      is_minimizable = False
+      wide = False
+      as_list = False
+  File "apps/frappe/frappe/__init__.py", line 549, in msgprint
+    _raise_exception()
+      title = None
+      as_table = False
+      as_list = False
+      indicator = 'red'
+      alert = False
+      primary_action = None
+      is_minimizable = False
+      wide = False
+      realtime = False
+      sys = <module 'sys' (built-in)>
+      _raise_exception = <function msgprint.<locals>._raise_exception at 0x109f73e20>
+      _strip_html_tags = <functools._lru_cache_wrapper object at 0x109f76b90>
+      inspect = <module 'inspect' from '/usr/local/Cellar/python@3.10/3.10.13_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/inspect.py'>
+      msg = 'mysqldump not found in PATH! This is required to take a backup.'
+      out = {'message': 'mysqldump not found in PATH! This is required to take a backup.', 'title': 'Message', 'indicator': 'red', 'raise_exception': 1, '__frappe_exc_id': 'd6082f8cae4066cff136e3b54a75ce755dfad5c5e83c5468226419f3'}
+      raise_exception = <class 'frappe.exceptions.ExecutableNotFound'>
+      strip_html_tags = <function strip_html_tags at 0x107ef4c10>
+  File "apps/frappe/frappe/__init__.py", line 500, in _raise_exception
+    raise exc
+      exc = ExecutableNotFound('mysqldump not found in PATH! This is required to take a backup.')
+      inspect = <module 'inspect' from '/usr/local/Cellar/python@3.10/3.10.13_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/inspect.py'>
+      msg = 'mysqldump not found in PATH! This is required to take a backup.'
+      out = {'message': 'mysqldump not found in PATH! This is required to take a backup.', 'title': 'Message', 'indicator': 'red', 'raise_exception': 1, '__frappe_exc_id': 'd6082f8cae4066cff136e3b54a75ce755dfad5c5e83c5468226419f3'}
+      raise_exception = <class 'frappe.exceptions.ExecutableNotFound'>
+frappe.exceptions.ExecutableNotFound: mysqldump not found in PATH! This is required to take a backup.
+Backup failed for Site test-site-1. Database or site_config.json may be corrupted
+Traceback with variables (most recent call last):
+  File "apps/frappe/frappe/commands/site.py", line 894, in backup
+    odb = scheduled_backup(
+      context = {'sites': ['site1.local', 'test-site-1'], 'force': False, 'verbose': True, 'profile': False}
+      with_files = False
+      backup_path = None
+      backup_path_db = None
+      backup_path_files = None
+      backup_path_private_files = None
+      backup_path_conf = None
+      ignore_backup_conf = False
+      verbose = True
+      compress = False
+      include = ''
+      exclude = ''
+      scheduled_backup = <function scheduled_backup at 0x10899a4d0>
+      exit_code = 1
+      site = 'test-site-1'
+  File "apps/frappe/frappe/utils/backups.py", line 547, in scheduled_backup
+    return new_backup(
+      older_than = 6
+      ignore_files = True
+      backup_path = None
+      backup_path_db = None
+      backup_path_files = None
+      backup_path_private_files = None
+      backup_path_conf = None
+      ignore_conf = False
+      include_doctypes = ''
+      exclude_doctypes = ''
+      compress = False
+      force = True
+      verbose = True
+  File "apps/frappe/frappe/utils/backups.py", line 598, in new_backup
+    odb.get_backup(older_than, ignore_files, force=force)
+      older_than = 6
+      ignore_files = True
+      backup_path = None
+      backup_path_db = None
+      backup_path_files = None
+      backup_path_private_files = None
+      backup_path_conf = None
+      ignore_conf = False
+      include_doctypes = ''
+      exclude_doctypes = ''
+      compress = False
+      force = True
+      verbose = True
+      odb = <frappe.utils.backups.BackupGenerator object at 0x108d17640>
+  File "apps/frappe/frappe/utils/backups.py", line 186, in get_backup
+    self.take_dump()
+      self = <frappe.utils.backups.BackupGenerator object at 0x108d17640>
+      older_than = 6
+      ignore_files = True
+      force = True
+      last_db = False
+      last_file = False
+      last_private_file = False
+      site_config_backup_path = False
+  File "apps/frappe/frappe/utils/backups.py", line 391, in take_dump
+    db_exc = self.get_db_dump_exeuctable()
+      get_app_branch = <function get_app_branch at 0x109f73b50>
+      frappe = <module 'frappe' from 'apps/frappe/frappe/__init__.py'>
+      self = <frappe.utils.backups.BackupGenerator object at 0x108d17640>
+  File "apps/frappe/frappe/utils/backups.py", line 381, in get_db_dump_exeuctable
+    frappe.throw(
+      self = <frappe.utils.backups.BackupGenerator object at 0x108d17640>
+      db_exc = 'mysqldump'
+      exists = False
+      mariadb_dump_path = None
+  File "apps/frappe/frappe/__init__.py", line 577, in throw
+    msgprint(
+      msg = 'mysqldump not found in PATH! This is required to take a backup.'
+      exc = <class 'frappe.exceptions.ExecutableNotFound'>
+      title = None
+      is_minimizable = False
+      wide = False
+      as_list = False
+  File "apps/frappe/frappe/__init__.py", line 549, in msgprint
+    _raise_exception()
+      title = None
+      as_table = False
+      as_list = False
+      indicator = 'red'
+      alert = False
+      primary_action = None
+      is_minimizable = False
+      wide = False
+      realtime = False
+      sys = <module 'sys' (built-in)>
+      _raise_exception = <function msgprint.<locals>._raise_exception at 0x10a232440>
+      _strip_html_tags = <functools._lru_cache_wrapper object at 0x10a1f8720>
+      inspect = <module 'inspect' from '/usr/local/Cellar/python@3.10/3.10.13_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/inspect.py'>
+      msg = 'mysqldump not found in PATH! This is required to take a backup.'
+      out = {'message': 'mysqldump not found in PATH! This is required to take a backup.', 'title': 'Message', 'indicator': 'red', 'raise_exception': 1, '__frappe_exc_id': '4df5b5af17ce93586c5d1e16380e47ca63a9ec61eb61df8f9abaff50'}
+      raise_exception = <class 'frappe.exceptions.ExecutableNotFound'>
+      strip_html_tags = <function strip_html_tags at 0x107ef4c10>
+  File "apps/frappe/frappe/__init__.py", line 500, in _raise_exception
+    raise exc
+      exc = ExecutableNotFound('mysqldump not found in PATH! This is required to take a backup.')
+      inspect = <module 'inspect' from '/usr/local/Cellar/python@3.10/3.10.13_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/inspect.py'>
+      msg = 'mysqldump not found in PATH! This is required to take a backup.'
+      out = {'message': 'mysqldump not found in PATH! This is required to take a backup.', 'title': 'Message', 'indicator': 'red', 'raise_exception': 1, '__frappe_exc_id': '4df5b5af17ce93586c5d1e16380e47ca63a9ec61eb61df8f9abaff50'}
+      raise_exception = <class 'frappe.exceptions.ExecutableNotFound'>
+frappe.exceptions.ExecutableNotFound: mysqldump not found in PATH! This is required to take a backup.

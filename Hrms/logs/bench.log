@@ -1,0 +1,138 @@
+2024-01-08 16:53:00,376 DEBUG cd Hrms && python3 -m venv env
+2024-01-08 16:53:05,552 DEBUG cd Hrms && /Users/mac/Hrms/env/bin/python -m pip install --quiet --upgrade pip
+2024-01-08 16:53:08,869 DEBUG cd Hrms && /Users/mac/Hrms/env/bin/python -m pip install --quiet wheel
+2024-01-08 16:53:10,048 LOG Getting frappe
+2024-01-08 16:53:10,049 DEBUG cd Hrms/apps && git clone https://github.com/frappe/frappe.git  --depth 1 --origin upstream
+2024-01-08 16:53:21,171 LOG Installing frappe
+2024-01-08 16:53:21,172 DEBUG cd /Users/mac/Hrms && /Users/mac/Hrms/env/bin/python -m pip install --quiet --upgrade -e /Users/mac/Hrms/apps/frappe 
+2024-01-08 16:54:19,245 DEBUG cd /Users/mac/Hrms/apps/frappe && yarn install
+2024-01-08 16:54:31,299 DEBUG cd /Users/mac/Hrms && supervisorctl restart frappe:
+2024-01-08 16:54:31,603 WARNING cd /Users/mac/Hrms && supervisorctl restart frappe: executed with exit code 7
+2024-01-08 16:54:31,603 WARNING restarting supervisor failed. Use `bench restart` to retry.
+2024-01-08 16:54:31,604 DEBUG cd Hrms && bench build
+2024-01-08 16:54:31,895 INFO /usr/local/bin/bench build
+2024-01-08 16:55:03,096 LOG setting up backups
+2024-01-08 16:55:05,694 LOG backups were set up
+2024-01-08 16:55:05,694 INFO Bench Hrms initialized
+2024-01-08 16:56:57,753 INFO /usr/local/bin/bench new-site hrms-test-1
+2024-01-08 16:59:07,703 INFO /usr/local/bin/bench get-app hrms
+2024-01-08 16:59:09,612 LOG Getting hrms
+2024-01-08 16:59:09,613 DEBUG cd ./apps && git clone https://github.com/frappe/hrms.git  --depth 1 --origin upstream
+2024-01-08 16:59:17,509 LOG Installing hrms
+2024-01-08 16:59:17,854 DEBUG cd /Users/mac/Hrms && /Users/mac/Hrms/env/bin/python -m pip install --quiet --upgrade -e /Users/mac/Hrms/apps/hrms 
+2024-01-08 16:59:24,073 DEBUG cd /Users/mac/Hrms/apps/hrms && yarn install
+2024-01-08 16:59:37,759 DEBUG bench build --app hrms
+2024-01-08 16:59:38,258 INFO /usr/local/bin/bench build --app hrms
+2024-01-08 17:00:03,617 DEBUG cd /Users/mac/Hrms && supervisorctl restart frappe:
+2024-01-08 17:00:04,091 WARNING cd /Users/mac/Hrms && supervisorctl restart frappe: executed with exit code 7
+2024-01-08 17:00:04,092 WARNING restarting supervisor failed. Use `bench restart` to retry.
+2024-01-08 17:00:59,679 INFO /usr/local/bin/bench --site hrms-test-1 install-app hrms
+2024-01-08 17:03:53,267 INFO /usr/local/bin/bench get-app --branch version-14 erpnext
+2024-01-08 17:03:54,559 LOG Getting erpnext
+2024-01-08 17:03:54,559 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext.git --branch version-14 --depth 1 --origin upstream
+2024-01-08 17:04:21,262 LOG Installing erpnext
+2024-01-08 17:04:21,681 DEBUG cd /Users/mac/Hrms && /Users/mac/Hrms/env/bin/python -m pip install --quiet --upgrade -e /Users/mac/Hrms/apps/erpnext 
+2024-01-08 17:04:35,628 DEBUG cd /Users/mac/Hrms/apps/erpnext && yarn install
+2024-01-08 17:04:36,806 DEBUG bench build --app erpnext
+2024-01-08 17:04:37,168 INFO /usr/local/bin/bench build --app erpnext
+2024-01-08 17:04:38,944 WARNING bench build --app erpnext executed with exit code 1
+2024-01-08 17:04:38,946 WARNING /usr/local/bin/bench get-app --branch version-14 erpnext executed with exit code 1
+2024-01-08 17:05:25,905 INFO /usr/local/bin/bench init --skip-redis-config-generation --strike-branch version-14 strike-bench
+2024-01-08 17:05:25,918 WARNING /usr/local/bin/bench init --skip-redis-config-generation --strike-branch version-14 strike-bench executed with exit code 2
+2024-01-08 17:05:33,398 INFO /usr/local/bin/bench init --skip-redis-config-generation --strike-branch version-14 strike-bench
+2024-01-08 17:05:33,406 WARNING /usr/local/bin/bench init --skip-redis-config-generation --strike-branch version-14 strike-bench executed with exit code 2
+2024-01-08 17:10:40,934 INFO /usr/local/bin/bench get-app erpnext --branch version-13
+2024-01-08 17:10:48,756 INFO App moved from apps/erpnext to archived/apps/erpnext-2024-01-08
+2024-01-08 17:10:48,800 LOG Getting erpnext
+2024-01-08 17:10:48,801 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext.git --branch version-13 --depth 1 --origin upstream
+2024-01-08 17:11:27,793 LOG Installing erpnext
+2024-01-08 17:11:28,431 DEBUG cd /Users/mac/Hrms && /Users/mac/Hrms/env/bin/python -m pip install --quiet --upgrade -e /Users/mac/Hrms/apps/erpnext 
+2024-01-08 17:11:55,441 DEBUG cd /Users/mac/Hrms/apps/erpnext && yarn install
+2024-01-08 17:11:56,069 DEBUG bench build --app erpnext
+2024-01-08 17:11:56,416 INFO /usr/local/bin/bench build --app erpnext
+2024-01-08 17:11:58,310 WARNING bench build --app erpnext executed with exit code 1
+2024-01-08 17:11:58,311 WARNING /usr/local/bin/bench get-app erpnext --branch version-13 executed with exit code 1
+2024-01-08 18:00:01,229 INFO /usr/local/bin/bench --verbose --site all backup
+2024-01-08 18:56:58,170 INFO /usr/local/bin/bench get-app erpnext --branch version-14
+2024-01-08 18:57:00,483 INFO App moved from apps/erpnext to archived/apps/erpnext-2024-01-08_1
+2024-01-08 18:57:00,512 LOG Getting erpnext
+2024-01-08 18:57:00,512 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext.git --branch version-14 --depth 1 --origin upstream
+2024-01-08 18:57:35,559 LOG Installing erpnext
+2024-01-08 18:57:35,899 DEBUG cd /Users/mac/Hrms && /Users/mac/Hrms/env/bin/python -m pip install --quiet --upgrade -e /Users/mac/Hrms/apps/erpnext 
+2024-01-08 18:57:42,998 DEBUG cd /Users/mac/Hrms/apps/erpnext && yarn install
+2024-01-08 18:57:47,031 DEBUG bench build --app erpnext
+2024-01-08 18:57:47,526 INFO /usr/local/bin/bench build --app erpnext
+2024-01-08 18:57:49,930 WARNING bench build --app erpnext executed with exit code 1
+2024-01-08 18:57:49,931 WARNING /usr/local/bin/bench get-app erpnext --branch version-14 executed with exit code 1
+2024-01-08 18:58:08,016 INFO /usr/local/bin/bench get-app erpnext --branch version-15
+2024-01-08 18:58:09,714 INFO App moved from apps/erpnext to archived/apps/erpnext-2024-01-08_2
+2024-01-08 18:58:09,742 LOG Getting erpnext
+2024-01-08 18:58:09,743 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext.git --branch version-15 --depth 1 --origin upstream
+2024-01-08 18:58:29,036 LOG Installing erpnext
+2024-01-08 18:58:29,538 DEBUG cd /Users/mac/Hrms && /Users/mac/Hrms/env/bin/python -m pip install --quiet --upgrade -e /Users/mac/Hrms/apps/erpnext 
+2024-01-08 18:58:38,260 DEBUG cd /Users/mac/Hrms/apps/erpnext && yarn install
+2024-01-08 18:58:38,753 DEBUG bench build --app erpnext
+2024-01-08 18:58:39,107 INFO /usr/local/bin/bench build --app erpnext
+2024-01-08 18:58:40,903 WARNING bench build --app erpnext executed with exit code 1
+2024-01-08 18:58:40,904 WARNING /usr/local/bin/bench get-app erpnext --branch version-15 executed with exit code 1
+2024-01-08 18:58:45,139 INFO /usr/local/bin/bench get-app erpnext --branch version-16
+2024-01-08 18:58:46,639 INFO App moved from apps/erpnext to archived/apps/erpnext-2024-01-08_3
+2024-01-08 18:58:46,667 LOG Getting erpnext
+2024-01-08 18:58:46,667 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext.git --branch version-16 --depth 1 --origin upstream
+2024-01-08 18:58:47,668 WARNING cd ./apps && git clone https://github.com/frappe/erpnext.git --branch version-16 --depth 1 --origin upstream executed with exit code 128
+2024-01-08 18:58:47,669 WARNING /usr/local/bin/bench get-app erpnext --branch version-16 executed with exit code 1
+2024-01-08 18:58:57,057 INFO /usr/local/bin/bench get-app erpnext --branch version-12
+2024-01-08 18:58:57,811 LOG Getting erpnext
+2024-01-08 18:58:57,812 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext.git --branch version-12 --depth 1 --origin upstream
+2024-01-08 18:59:25,448 LOG Installing erpnext
+2024-01-08 18:59:25,886 DEBUG cd /Users/mac/Hrms && /Users/mac/Hrms/env/bin/python -m pip install --quiet --upgrade -e /Users/mac/Hrms/apps/erpnext 
+2024-01-08 19:04:17,506 WARNING /usr/local/bin/bench get-app erpnext --branch version-12 executed with exit code 1
+2024-01-08 19:04:21,832 INFO /usr/local/bin/bench get-app erpnext --branch version-14
+2024-01-08 19:04:23,851 INFO App moved from apps/erpnext to archived/apps/erpnext-2024-01-08_4
+2024-01-08 19:04:23,878 LOG Getting erpnext
+2024-01-08 19:04:23,878 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext.git --branch version-14 --depth 1 --origin upstream
+2024-01-08 19:04:43,620 LOG Installing erpnext
+2024-01-08 19:04:44,445 DEBUG cd /Users/mac/Hrms && /Users/mac/Hrms/env/bin/python -m pip install --quiet --upgrade -e /Users/mac/Hrms/apps/erpnext 
+2024-01-08 19:04:53,074 DEBUG cd /Users/mac/Hrms/apps/erpnext && yarn install
+2024-01-08 19:04:54,049 DEBUG bench build --app erpnext
+2024-01-08 19:04:54,326 INFO /usr/local/bin/bench build --app erpnext
+2024-01-08 19:04:56,437 WARNING bench build --app erpnext executed with exit code 1
+2024-01-08 19:04:56,438 WARNING /usr/local/bin/bench get-app erpnext --branch version-14 executed with exit code 1
+2024-01-09 12:00:01,541 INFO /usr/local/bin/bench --verbose --site all backup
+2024-01-09 17:17:41,811 INFO /usr/local/bin/bench init --frappe-branch version-15 frappe-bench
+2024-01-09 17:17:42,174 DEBUG cd frappe-bench && python3 -m venv env
+2024-01-09 17:17:47,902 DEBUG cd frappe-bench && /Users/mac/Hrms/frappe-bench/env/bin/python -m pip install --quiet --upgrade pip
+2024-01-09 17:17:51,206 DEBUG cd frappe-bench && /Users/mac/Hrms/frappe-bench/env/bin/python -m pip install --quiet wheel
+2024-01-09 17:17:53,510 LOG Getting frappe
+2024-01-09 17:17:53,511 DEBUG cd frappe-bench/apps && git clone https://github.com/frappe/frappe.git --branch version-15 --depth 1 --origin upstream
+2024-01-09 17:17:56,822 WARNING /usr/local/bin/bench init --frappe-branch version-15 frappe-bench executed with exit code 1
+2024-01-09 17:18:50,282 INFO /usr/local/bin/bench get-app payments
+2024-01-09 17:18:50,949 LOG Getting payments
+2024-01-09 17:18:50,949 DEBUG cd ./apps && git clone https://github.com/frappe/payments.git  --depth 1 --origin upstream
+2024-01-09 17:18:52,394 LOG Installing payments
+2024-01-09 17:18:53,345 DEBUG cd /Users/mac/Hrms && /Users/mac/Hrms/env/bin/python -m pip install --quiet --upgrade -e /Users/mac/Hrms/apps/payments 
+2024-01-09 17:19:00,547 DEBUG bench build --app payments
+2024-01-09 17:19:00,767 INFO /usr/local/bin/bench build --app payments
+2024-01-09 17:19:02,840 WARNING bench build --app payments executed with exit code 1
+2024-01-09 17:19:02,841 WARNING /usr/local/bin/bench get-app payments executed with exit code 1
+2024-01-09 17:19:17,224 INFO /usr/local/bin/bench init --frappe-branch version-15 frappe-bench
+2024-01-09 17:19:17,319 DEBUG cd frappe-bench && python3 -m venv env
+2024-01-09 17:19:22,098 DEBUG cd frappe-bench && /Users/mac/Hrms/frappe-bench/env/bin/python -m pip install --quiet --upgrade pip
+2024-01-09 17:19:24,979 DEBUG cd frappe-bench && /Users/mac/Hrms/frappe-bench/env/bin/python -m pip install --quiet wheel
+2024-01-09 17:19:27,112 LOG Getting frappe
+2024-01-09 17:19:27,112 DEBUG cd frappe-bench/apps && git clone https://github.com/frappe/frappe.git --branch version-15 --depth 1 --origin upstream
+2024-01-09 17:19:46,265 LOG Installing frappe
+2024-01-09 17:19:46,265 DEBUG cd /Users/mac/Hrms/frappe-bench && /Users/mac/Hrms/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /Users/mac/Hrms/frappe-bench/apps/frappe 
+2024-01-09 17:20:45,284 DEBUG cd /Users/mac/Hrms/frappe-bench/apps/frappe && yarn install
+2024-01-09 17:21:01,371 DEBUG cd /Users/mac/Hrms/frappe-bench && supervisorctl restart frappe:
+2024-01-09 17:21:01,644 WARNING cd /Users/mac/Hrms/frappe-bench && supervisorctl restart frappe: executed with exit code 7
+2024-01-09 17:21:01,644 WARNING restarting supervisor failed. Use `bench restart` to retry.
+2024-01-09 17:21:01,645 DEBUG cd frappe-bench && bench build
+2024-01-09 17:21:28,572 LOG setting up backups
+2024-01-09 17:21:30,627 LOG backups were set up
+2024-01-09 17:21:30,628 INFO Bench frappe-bench initialized
+2024-01-09 18:00:01,171 INFO /usr/local/bin/bench --verbose --site all backup
+2024-01-10 18:00:01,078 INFO /usr/local/bin/bench --verbose --site all backup
+2024-01-11 12:00:01,328 INFO /usr/local/bin/bench --verbose --site all backup
+2024-01-12 12:00:01,385 INFO /usr/local/bin/bench --verbose --site all backup
+2024-01-16 00:00:00,739 INFO /usr/local/bin/bench --verbose --site all backup

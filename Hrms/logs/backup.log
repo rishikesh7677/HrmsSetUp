@@ -1,0 +1,294 @@
+Backup failed for Site hrms-test-1. Database or site_config.json may be corrupted
+Traceback with variables (most recent call last):
+  File "apps/frappe/frappe/commands/site.py", line 879, in backup
+    frappe.init(site=site)
+      context = {'sites': ['hrms-test-1'], 'force': False, 'verbose': True, 'profile': False}
+      with_files = False
+      backup_path = None
+      backup_path_db = None
+      backup_path_files = None
+      backup_path_private_files = None
+      backup_path_conf = None
+      ignore_backup_conf = False
+      verbose = True
+      compress = False
+      include = ''
+      exclude = ''
+      old_backup_metadata = False
+      scheduled_backup = <function scheduled_backup at 0x1052ad2d0>
+      exit_code = 0
+      site = 'hrms-test-1'
+  File "apps/frappe/frappe/__init__.py", line 246, in init
+    setup_redis_cache_connection()
+      site = 'hrms-test-1'
+      sites_path = '.'
+      new_site = False
+      force = False
+  File "apps/frappe/frappe/__init__.py", line 403, in setup_redis_cache_connection
+    from frappe.utils.redis_wrapper import RedisWrapper
+  File "apps/frappe/frappe/utils/redis_wrapper.py", line 7, in <module>
+    from redis.commands.search import Search
+      __name__ = 'frappe.utils.redis_wrapper'
+      __doc__ = None
+      __package__ = 'frappe.utils'
+      __loader__ = <_frozen_importlib_external.SourceFileLoader object at 0x1056d2980>
+      __spec__ = ModuleSpec(name='frappe.utils.redis_wrapper', loader=<_frozen_importlib_external.SourceFileLoader object at 0x1056d2980>, origin='apps/frappe/frappe/utils/redis_wrapper.py')
+      __file__ = 'apps/frappe/frappe/utils/redis_wrapper.py'
+      __cached__ = 'apps/frappe/frappe/utils/__pycache__/redis_wrapper.cpython-310.pyc'
+      __builtins__ = {'__name__': 'builtins', '__doc__': "Built-in functions, exceptions, and other objects.\n\nNoteworthy: None is the `nil' object; Ellipsis represents `...' in slices.", '__package__': '', '__loader__': <class '_frozen_importlib.BuiltinImporter'>, '__spec__': ModuleSpec(name='builtins', loader=<class '_frozen_importlib.BuiltinImporter'>, origin='built-in'), '__build_class__': <built-in function __build_class__>, '__import__': <built-in function __import__>, 'abs': <built-in function abs>, 'all': <built-in function all>, 'any': <built-in function any>, 'ascii': <built-in function ascii>, 'bin': <built-in function bin>, 'breakpoint': <built-in function breakpoint>, 'callable': <built-in function callable>, 'chr': <built-in function chr>, 'compile': <built-in function compile>, 'delattr': <built-in function delattr>, 'dir': <built-in function dir>, 'divmod': <built-in function divmod>, 'eval': <built-in function eval>, 'exec': <built-in function exec>, 'format': <built-in function format>, ...
+      pickle = <module 'pickle' from '/usr/local/Cellar/python@3.10/3.10.13_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pickle.py'>
+      re = <module 're' from '/usr/local/Cellar/python@3.10/3.10.13_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/re.py'>
+      redis = <module 'redis' from 'env/lib/python3.10/site-packages/redis/__init__.py'>
+builtins.ModuleNotFoundError: No module named 'redis.commands'
+Backup failed for Site hrms-test-1. Database or site_config.json may be corrupted
+Traceback with variables (most recent call last):
+  File "apps/frappe/frappe/commands/site.py", line 879, in backup
+    frappe.init(site=site)
+      context = {'sites': ['hrms-test-1'], 'force': False, 'verbose': True, 'profile': False}
+      with_files = False
+      backup_path = None
+      backup_path_db = None
+      backup_path_files = None
+      backup_path_private_files = None
+      backup_path_conf = None
+      ignore_backup_conf = False
+      verbose = True
+      compress = False
+      include = ''
+      exclude = ''
+      old_backup_metadata = False
+      scheduled_backup = <function scheduled_backup at 0x10dc97490>
+      exit_code = 0
+      site = 'hrms-test-1'
+  File "apps/frappe/frappe/__init__.py", line 246, in init
+    setup_redis_cache_connection()
+      site = 'hrms-test-1'
+      sites_path = '.'
+      new_site = False
+      force = False
+  File "apps/frappe/frappe/__init__.py", line 403, in setup_redis_cache_connection
+    from frappe.utils.redis_wrapper import RedisWrapper
+  File "apps/frappe/frappe/utils/redis_wrapper.py", line 7, in <module>
+    from redis.commands.search import Search
+      __name__ = 'frappe.utils.redis_wrapper'
+      __doc__ = None
+      __package__ = 'frappe.utils'
+      __loader__ = <_frozen_importlib_external.SourceFileLoader object at 0x10e0d2410>
+      __spec__ = ModuleSpec(name='frappe.utils.redis_wrapper', loader=<_frozen_importlib_external.SourceFileLoader object at 0x10e0d2410>, origin='apps/frappe/frappe/utils/redis_wrapper.py')
+      __file__ = 'apps/frappe/frappe/utils/redis_wrapper.py'
+      __cached__ = 'apps/frappe/frappe/utils/__pycache__/redis_wrapper.cpython-310.pyc'
+      __builtins__ = {'__name__': 'builtins', '__doc__': "Built-in functions, exceptions, and other objects.\n\nNoteworthy: None is the `nil' object; Ellipsis represents `...' in slices.", '__package__': '', '__loader__': <class '_frozen_importlib.BuiltinImporter'>, '__spec__': ModuleSpec(name='builtins', loader=<class '_frozen_importlib.BuiltinImporter'>, origin='built-in'), '__build_class__': <built-in function __build_class__>, '__import__': <built-in function __import__>, 'abs': <built-in function abs>, 'all': <built-in function all>, 'any': <built-in function any>, 'ascii': <built-in function ascii>, 'bin': <built-in function bin>, 'breakpoint': <built-in function breakpoint>, 'callable': <built-in function callable>, 'chr': <built-in function chr>, 'compile': <built-in function compile>, 'delattr': <built-in function delattr>, 'dir': <built-in function dir>, 'divmod': <built-in function divmod>, 'eval': <built-in function eval>, 'exec': <built-in function exec>, 'format': <built-in function format>, ...
+      pickle = <module 'pickle' from '/usr/local/Cellar/python@3.10/3.10.13_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pickle.py'>
+      re = <module 're' from '/usr/local/Cellar/python@3.10/3.10.13_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/re.py'>
+      redis = <module 'redis' from 'env/lib/python3.10/site-packages/redis/__init__.py'>
+builtins.ModuleNotFoundError: No module named 'redis.commands'
+Backup failed for Site hrms-test-1. Database or site_config.json may be corrupted
+Traceback with variables (most recent call last):
+  File "apps/frappe/frappe/commands/site.py", line 879, in backup
+    frappe.init(site=site)
+      context = {'sites': ['hrms-test-1'], 'force': False, 'verbose': True, 'profile': False}
+      with_files = False
+      backup_path = None
+      backup_path_db = None
+      backup_path_files = None
+      backup_path_private_files = None
+      backup_path_conf = None
+      ignore_backup_conf = False
+      verbose = True
+      compress = False
+      include = ''
+      exclude = ''
+      old_backup_metadata = False
+      scheduled_backup = <function scheduled_backup at 0x10e19b490>
+      exit_code = 0
+      site = 'hrms-test-1'
+  File "apps/frappe/frappe/__init__.py", line 246, in init
+    setup_redis_cache_connection()
+      site = 'hrms-test-1'
+      sites_path = '.'
+      new_site = False
+      force = False
+  File "apps/frappe/frappe/__init__.py", line 403, in setup_redis_cache_connection
+    from frappe.utils.redis_wrapper import RedisWrapper
+  File "apps/frappe/frappe/utils/redis_wrapper.py", line 7, in <module>
+    from redis.commands.search import Search
+      __name__ = 'frappe.utils.redis_wrapper'
+      __doc__ = None
+      __package__ = 'frappe.utils'
+      __loader__ = <_frozen_importlib_external.SourceFileLoader object at 0x10e5d2560>
+      __spec__ = ModuleSpec(name='frappe.utils.redis_wrapper', loader=<_frozen_importlib_external.SourceFileLoader object at 0x10e5d2560>, origin='apps/frappe/frappe/utils/redis_wrapper.py')
+      __file__ = 'apps/frappe/frappe/utils/redis_wrapper.py'
+      __cached__ = 'apps/frappe/frappe/utils/__pycache__/redis_wrapper.cpython-310.pyc'
+      __builtins__ = {'__name__': 'builtins', '__doc__': "Built-in functions, exceptions, and other objects.\n\nNoteworthy: None is the `nil' object; Ellipsis represents `...' in slices.", '__package__': '', '__loader__': <class '_frozen_importlib.BuiltinImporter'>, '__spec__': ModuleSpec(name='builtins', loader=<class '_frozen_importlib.BuiltinImporter'>, origin='built-in'), '__build_class__': <built-in function __build_class__>, '__import__': <built-in function __import__>, 'abs': <built-in function abs>, 'all': <built-in function all>, 'any': <built-in function any>, 'ascii': <built-in function ascii>, 'bin': <built-in function bin>, 'breakpoint': <built-in function breakpoint>, 'callable': <built-in function callable>, 'chr': <built-in function chr>, 'compile': <built-in function compile>, 'delattr': <built-in function delattr>, 'dir': <built-in function dir>, 'divmod': <built-in function divmod>, 'eval': <built-in function eval>, 'exec': <built-in function exec>, 'format': <built-in function format>, ...
+      pickle = <module 'pickle' from '/usr/local/Cellar/python@3.10/3.10.13_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pickle.py'>
+      re = <module 're' from '/usr/local/Cellar/python@3.10/3.10.13_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/re.py'>
+      redis = <module 'redis' from 'env/lib/python3.10/site-packages/redis/__init__.py'>
+builtins.ModuleNotFoundError: No module named 'redis.commands'
+Backup failed for Site hrms-test-1. Database or site_config.json may be corrupted
+Traceback with variables (most recent call last):
+  File "apps/frappe/frappe/commands/site.py", line 879, in backup
+    frappe.init(site=site)
+      context = {'sites': ['hrms-test-1'], 'force': False, 'verbose': True, 'profile': False}
+      with_files = False
+      backup_path = None
+      backup_path_db = None
+      backup_path_files = None
+      backup_path_private_files = None
+      backup_path_conf = None
+      ignore_backup_conf = False
+      verbose = True
+      compress = False
+      include = ''
+      exclude = ''
+      old_backup_metadata = False
+      scheduled_backup = <function scheduled_backup at 0x103b97490>
+      exit_code = 0
+      site = 'hrms-test-1'
+  File "apps/frappe/frappe/__init__.py", line 246, in init
+    setup_redis_cache_connection()
+      site = 'hrms-test-1'
+      sites_path = '.'
+      new_site = False
+      force = False
+  File "apps/frappe/frappe/__init__.py", line 403, in setup_redis_cache_connection
+    from frappe.utils.redis_wrapper import RedisWrapper
+  File "apps/frappe/frappe/utils/redis_wrapper.py", line 7, in <module>
+    from redis.commands.search import Search
+      __name__ = 'frappe.utils.redis_wrapper'
+      __doc__ = None
+      __package__ = 'frappe.utils'
+      __loader__ = <_frozen_importlib_external.SourceFileLoader object at 0x103f2a530>
+      __spec__ = ModuleSpec(name='frappe.utils.redis_wrapper', loader=<_frozen_importlib_external.SourceFileLoader object at 0x103f2a530>, origin='apps/frappe/frappe/utils/redis_wrapper.py')
+      __file__ = 'apps/frappe/frappe/utils/redis_wrapper.py'
+      __cached__ = 'apps/frappe/frappe/utils/__pycache__/redis_wrapper.cpython-310.pyc'
+      __builtins__ = {'__name__': 'builtins', '__doc__': "Built-in functions, exceptions, and other objects.\n\nNoteworthy: None is the `nil' object; Ellipsis represents `...' in slices.", '__package__': '', '__loader__': <class '_frozen_importlib.BuiltinImporter'>, '__spec__': ModuleSpec(name='builtins', loader=<class '_frozen_importlib.BuiltinImporter'>, origin='built-in'), '__build_class__': <built-in function __build_class__>, '__import__': <built-in function __import__>, 'abs': <built-in function abs>, 'all': <built-in function all>, 'any': <built-in function any>, 'ascii': <built-in function ascii>, 'bin': <built-in function bin>, 'breakpoint': <built-in function breakpoint>, 'callable': <built-in function callable>, 'chr': <built-in function chr>, 'compile': <built-in function compile>, 'delattr': <built-in function delattr>, 'dir': <built-in function dir>, 'divmod': <built-in function divmod>, 'eval': <built-in function eval>, 'exec': <built-in function exec>, 'format': <built-in function format>, ...
+      pickle = <module 'pickle' from '/usr/local/Cellar/python@3.10/3.10.13_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pickle.py'>
+      re = <module 're' from '/usr/local/Cellar/python@3.10/3.10.13_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/re.py'>
+      redis = <module 'redis' from 'env/lib/python3.10/site-packages/redis/__init__.py'>
+builtins.ModuleNotFoundError: No module named 'redis.commands'
+Backup failed for Site hrms-test-1. Database or site_config.json may be corrupted
+Traceback with variables (most recent call last):
+  File "apps/frappe/frappe/commands/site.py", line 879, in backup
+    frappe.init(site=site)
+      context = {'sites': ['hrms-test-1'], 'force': False, 'verbose': True, 'profile': False}
+      with_files = False
+      backup_path = None
+      backup_path_db = None
+      backup_path_files = None
+      backup_path_private_files = None
+      backup_path_conf = None
+      ignore_backup_conf = False
+      verbose = True
+      compress = False
+      include = ''
+      exclude = ''
+      old_backup_metadata = False
+      scheduled_backup = <function scheduled_backup at 0x10829f490>
+      exit_code = 0
+      site = 'hrms-test-1'
+  File "apps/frappe/frappe/__init__.py", line 246, in init
+    setup_redis_cache_connection()
+      site = 'hrms-test-1'
+      sites_path = '.'
+      new_site = False
+      force = False
+  File "apps/frappe/frappe/__init__.py", line 403, in setup_redis_cache_connection
+    from frappe.utils.redis_wrapper import RedisWrapper
+  File "apps/frappe/frappe/utils/redis_wrapper.py", line 7, in <module>
+    from redis.commands.search import Search
+      __name__ = 'frappe.utils.redis_wrapper'
+      __doc__ = None
+      __package__ = 'frappe.utils'
+      __loader__ = <_frozen_importlib_external.SourceFileLoader object at 0x108632560>
+      __spec__ = ModuleSpec(name='frappe.utils.redis_wrapper', loader=<_frozen_importlib_external.SourceFileLoader object at 0x108632560>, origin='apps/frappe/frappe/utils/redis_wrapper.py')
+      __file__ = 'apps/frappe/frappe/utils/redis_wrapper.py'
+      __cached__ = 'apps/frappe/frappe/utils/__pycache__/redis_wrapper.cpython-310.pyc'
+      __builtins__ = {'__name__': 'builtins', '__doc__': "Built-in functions, exceptions, and other objects.\n\nNoteworthy: None is the `nil' object; Ellipsis represents `...' in slices.", '__package__': '', '__loader__': <class '_frozen_importlib.BuiltinImporter'>, '__spec__': ModuleSpec(name='builtins', loader=<class '_frozen_importlib.BuiltinImporter'>, origin='built-in'), '__build_class__': <built-in function __build_class__>, '__import__': <built-in function __import__>, 'abs': <built-in function abs>, 'all': <built-in function all>, 'any': <built-in function any>, 'ascii': <built-in function ascii>, 'bin': <built-in function bin>, 'breakpoint': <built-in function breakpoint>, 'callable': <built-in function callable>, 'chr': <built-in function chr>, 'compile': <built-in function compile>, 'delattr': <built-in function delattr>, 'dir': <built-in function dir>, 'divmod': <built-in function divmod>, 'eval': <built-in function eval>, 'exec': <built-in function exec>, 'format': <built-in function format>, ...
+      pickle = <module 'pickle' from '/usr/local/Cellar/python@3.10/3.10.13_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pickle.py'>
+      re = <module 're' from '/usr/local/Cellar/python@3.10/3.10.13_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/re.py'>
+      redis = <module 'redis' from 'env/lib/python3.10/site-packages/redis/__init__.py'>
+builtins.ModuleNotFoundError: No module named 'redis.commands'
+Backup failed for Site hrms-test-1. Database or site_config.json may be corrupted
+Traceback with variables (most recent call last):
+  File "apps/frappe/frappe/commands/site.py", line 879, in backup
+    frappe.init(site=site)
+      context = {'sites': ['hrms-test-1'], 'force': False, 'verbose': True, 'profile': False}
+      with_files = False
+      backup_path = None
+      backup_path_db = None
+      backup_path_files = None
+      backup_path_private_files = None
+      backup_path_conf = None
+      ignore_backup_conf = False
+      verbose = True
+      compress = False
+      include = ''
+      exclude = ''
+      old_backup_metadata = False
+      scheduled_backup = <function scheduled_backup at 0x10f44b490>
+      exit_code = 0
+      site = 'hrms-test-1'
+  File "apps/frappe/frappe/__init__.py", line 246, in init
+    setup_redis_cache_connection()
+      site = 'hrms-test-1'
+      sites_path = '.'
+      new_site = False
+      force = False
+  File "apps/frappe/frappe/__init__.py", line 403, in setup_redis_cache_connection
+    from frappe.utils.redis_wrapper import RedisWrapper
+  File "apps/frappe/frappe/utils/redis_wrapper.py", line 7, in <module>
+    from redis.commands.search import Search
+      __name__ = 'frappe.utils.redis_wrapper'
+      __doc__ = None
+      __package__ = 'frappe.utils'
+      __loader__ = <_frozen_importlib_external.SourceFileLoader object at 0x10f7da560>
+      __spec__ = ModuleSpec(name='frappe.utils.redis_wrapper', loader=<_frozen_importlib_external.SourceFileLoader object at 0x10f7da560>, origin='apps/frappe/frappe/utils/redis_wrapper.py')
+      __file__ = 'apps/frappe/frappe/utils/redis_wrapper.py'
+      __cached__ = 'apps/frappe/frappe/utils/__pycache__/redis_wrapper.cpython-310.pyc'
+      __builtins__ = {'__name__': 'builtins', '__doc__': "Built-in functions, exceptions, and other objects.\n\nNoteworthy: None is the `nil' object; Ellipsis represents `...' in slices.", '__package__': '', '__loader__': <class '_frozen_importlib.BuiltinImporter'>, '__spec__': ModuleSpec(name='builtins', loader=<class '_frozen_importlib.BuiltinImporter'>, origin='built-in'), '__build_class__': <built-in function __build_class__>, '__import__': <built-in function __import__>, 'abs': <built-in function abs>, 'all': <built-in function all>, 'any': <built-in function any>, 'ascii': <built-in function ascii>, 'bin': <built-in function bin>, 'breakpoint': <built-in function breakpoint>, 'callable': <built-in function callable>, 'chr': <built-in function chr>, 'compile': <built-in function compile>, 'delattr': <built-in function delattr>, 'dir': <built-in function dir>, 'divmod': <built-in function divmod>, 'eval': <built-in function eval>, 'exec': <built-in function exec>, 'format': <built-in function format>, ...
+      pickle = <module 'pickle' from '/usr/local/Cellar/python@3.10/3.10.13_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pickle.py'>
+      re = <module 're' from '/usr/local/Cellar/python@3.10/3.10.13_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/re.py'>
+      redis = <module 'redis' from 'env/lib/python3.10/site-packages/redis/__init__.py'>
+builtins.ModuleNotFoundError: No module named 'redis.commands'
+Backup failed for Site hrms-test-1. Database or site_config.json may be corrupted
+Traceback with variables (most recent call last):
+  File "apps/frappe/frappe/commands/site.py", line 879, in backup
+    frappe.init(site=site)
+      context = {'sites': ['hrms-test-1'], 'force': False, 'verbose': True, 'profile': False}
+      with_files = False
+      backup_path = None
+      backup_path_db = None
+      backup_path_files = None
+      backup_path_private_files = None
+      backup_path_conf = None
+      ignore_backup_conf = False
+      verbose = True
+      compress = False
+      include = ''
+      exclude = ''
+      old_backup_metadata = False
+      scheduled_backup = <function scheduled_backup at 0x108e77490>
+      exit_code = 0
+      site = 'hrms-test-1'
+  File "apps/frappe/frappe/__init__.py", line 246, in init
+    setup_redis_cache_connection()
+      site = 'hrms-test-1'
+      sites_path = '.'
+      new_site = False
+      force = False
+  File "apps/frappe/frappe/__init__.py", line 403, in setup_redis_cache_connection
+    from frappe.utils.redis_wrapper import RedisWrapper
+  File "apps/frappe/frappe/utils/redis_wrapper.py", line 7, in <module>
+    from redis.commands.search import Search
+      __name__ = 'frappe.utils.redis_wrapper'
+      __doc__ = None
+      __package__ = 'frappe.utils'
+      __loader__ = <_frozen_importlib_external.SourceFileLoader object at 0x1092ae560>
+      __spec__ = ModuleSpec(name='frappe.utils.redis_wrapper', loader=<_frozen_importlib_external.SourceFileLoader object at 0x1092ae560>, origin='apps/frappe/frappe/utils/redis_wrapper.py')
+      __file__ = 'apps/frappe/frappe/utils/redis_wrapper.py'
+      __cached__ = 'apps/frappe/frappe/utils/__pycache__/redis_wrapper.cpython-310.pyc'
+      __builtins__ = {'__name__': 'builtins', '__doc__': "Built-in functions, exceptions, and other objects.\n\nNoteworthy: None is the `nil' object; Ellipsis represents `...' in slices.", '__package__': '', '__loader__': <class '_frozen_importlib.BuiltinImporter'>, '__spec__': ModuleSpec(name='builtins', loader=<class '_frozen_importlib.BuiltinImporter'>, origin='built-in'), '__build_class__': <built-in function __build_class__>, '__import__': <built-in function __import__>, 'abs': <built-in function abs>, 'all': <built-in function all>, 'any': <built-in function any>, 'ascii': <built-in function ascii>, 'bin': <built-in function bin>, 'breakpoint': <built-in function breakpoint>, 'callable': <built-in function callable>, 'chr': <built-in function chr>, 'compile': <built-in function compile>, 'delattr': <built-in function delattr>, 'dir': <built-in function dir>, 'divmod': <built-in function divmod>, 'eval': <built-in function eval>, 'exec': <built-in function exec>, 'format': <built-in function format>, ...
+      pickle = <module 'pickle' from '/usr/local/Cellar/python@3.10/3.10.13_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pickle.py'>
+      re = <module 're' from '/usr/local/Cellar/python@3.10/3.10.13_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/re.py'>
+      redis = <module 'redis' from 'env/lib/python3.10/site-packages/redis/__init__.py'>
+builtins.ModuleNotFoundError: No module named 'redis.commands'

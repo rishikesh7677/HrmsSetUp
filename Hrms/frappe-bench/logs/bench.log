@@ -1,0 +1,90 @@
+2024-01-09 17:19:17,319 DEBUG cd frappe-bench && python3 -m venv env
+2024-01-09 17:19:22,098 DEBUG cd frappe-bench && /Users/mac/Hrms/frappe-bench/env/bin/python -m pip install --quiet --upgrade pip
+2024-01-09 17:19:24,979 DEBUG cd frappe-bench && /Users/mac/Hrms/frappe-bench/env/bin/python -m pip install --quiet wheel
+2024-01-09 17:19:27,112 LOG Getting frappe
+2024-01-09 17:19:27,112 DEBUG cd frappe-bench/apps && git clone https://github.com/frappe/frappe.git --branch version-15 --depth 1 --origin upstream
+2024-01-09 17:19:46,265 LOG Installing frappe
+2024-01-09 17:19:46,265 DEBUG cd /Users/mac/Hrms/frappe-bench && /Users/mac/Hrms/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /Users/mac/Hrms/frappe-bench/apps/frappe 
+2024-01-09 17:20:45,284 DEBUG cd /Users/mac/Hrms/frappe-bench/apps/frappe && yarn install
+2024-01-09 17:21:01,371 DEBUG cd /Users/mac/Hrms/frappe-bench && supervisorctl restart frappe:
+2024-01-09 17:21:01,644 WARNING cd /Users/mac/Hrms/frappe-bench && supervisorctl restart frappe: executed with exit code 7
+2024-01-09 17:21:01,644 WARNING restarting supervisor failed. Use `bench restart` to retry.
+2024-01-09 17:21:01,645 DEBUG cd frappe-bench && bench build
+2024-01-09 17:21:01,992 INFO /usr/local/bin/bench build
+2024-01-09 17:21:28,572 LOG setting up backups
+2024-01-09 17:21:30,627 LOG backups were set up
+2024-01-09 17:21:30,628 INFO Bench frappe-bench initialized
+2024-01-09 17:27:48,838 INFO /usr/local/bin/bench new-site site1.local
+2024-01-09 17:29:37,702 INFO /usr/local/bin/bench get-app payments
+2024-01-09 17:29:38,434 LOG Getting payments
+2024-01-09 17:29:38,435 DEBUG cd ./apps && git clone https://github.com/frappe/payments.git  --depth 1 --origin upstream
+2024-01-09 17:29:39,870 LOG Installing payments
+2024-01-09 17:29:40,072 DEBUG cd /Users/mac/Hrms/frappe-bench && /Users/mac/Hrms/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /Users/mac/Hrms/frappe-bench/apps/payments 
+2024-01-09 17:29:47,406 DEBUG bench build --app payments
+2024-01-09 17:29:47,632 INFO /usr/local/bin/bench build --app payments
+2024-01-09 17:29:55,556 DEBUG cd /Users/mac/Hrms/frappe-bench && supervisorctl restart frappe:
+2024-01-09 17:29:55,848 WARNING cd /Users/mac/Hrms/frappe-bench && supervisorctl restart frappe: executed with exit code 7
+2024-01-09 17:29:55,849 WARNING restarting supervisor failed. Use `bench restart` to retry.
+2024-01-09 17:29:58,462 INFO /usr/local/bin/bench get-app --branch version-15 erpnext
+2024-01-09 17:29:59,108 LOG Getting erpnext
+2024-01-09 17:29:59,109 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext.git --branch version-15 --depth 1 --origin upstream
+2024-01-09 17:30:17,441 LOG Installing erpnext
+2024-01-09 17:30:17,661 DEBUG cd /Users/mac/Hrms/frappe-bench && /Users/mac/Hrms/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /Users/mac/Hrms/frappe-bench/apps/erpnext 
+2024-01-09 17:30:28,336 DEBUG cd /Users/mac/Hrms/frappe-bench/apps/erpnext && yarn install
+2024-01-09 17:30:28,974 DEBUG bench build --app erpnext
+2024-01-09 17:30:29,217 INFO /usr/local/bin/bench build --app erpnext
+2024-01-09 17:30:34,258 DEBUG cd /Users/mac/Hrms/frappe-bench && supervisorctl restart frappe:
+2024-01-09 17:30:34,540 WARNING cd /Users/mac/Hrms/frappe-bench && supervisorctl restart frappe: executed with exit code 7
+2024-01-09 17:30:34,541 WARNING restarting supervisor failed. Use `bench restart` to retry.
+2024-01-09 17:30:44,217 INFO /usr/local/bin/bench get-app hrms
+2024-01-09 17:30:45,175 LOG Getting hrms
+2024-01-09 17:30:45,175 DEBUG cd ./apps && git clone https://github.com/frappe/hrms.git  --depth 1 --origin upstream
+2024-01-09 17:30:55,029 LOG Installing hrms
+2024-01-09 17:30:55,294 DEBUG cd /Users/mac/Hrms/frappe-bench && /Users/mac/Hrms/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /Users/mac/Hrms/frappe-bench/apps/hrms 
+2024-01-09 17:31:00,884 DEBUG cd /Users/mac/Hrms/frappe-bench/apps/hrms && yarn install
+2024-01-09 17:31:12,002 DEBUG bench build --app hrms
+2024-01-09 17:31:12,304 INFO /usr/local/bin/bench build --app hrms
+2024-01-09 17:31:33,175 DEBUG cd /Users/mac/Hrms/frappe-bench && supervisorctl restart frappe:
+2024-01-09 17:31:33,448 WARNING cd /Users/mac/Hrms/frappe-bench && supervisorctl restart frappe: executed with exit code 7
+2024-01-09 17:31:33,448 WARNING restarting supervisor failed. Use `bench restart` to retry.
+2024-01-09 17:31:38,731 INFO /usr/local/bin/bench --site site1.local install-app erpnext
+2024-01-09 17:34:19,853 INFO /usr/local/bin/bench --site site1.local install-app hrms
+2024-01-09 17:37:18,779 INFO /usr/local/bin/bench --site site1.local install-app hrms
+2024-01-09 17:38:35,108 INFO /usr/local/bin/bench --site site1.local install-app hrms
+2024-01-09 17:39:33,451 INFO /usr/local/bin/bench --site site1.local install-app hrms
+2024-01-09 17:41:14,692 INFO /usr/local/bin/bench --site site1.local install-app hrms
+2024-01-09 17:41:35,058 INFO /usr/local/bin/bench --site site1.local install-app hrms
+2024-01-09 17:41:42,017 INFO /usr/local/bin/bench --site site1.local install-app hrms
+2024-01-09 17:41:56,324 INFO /usr/local/bin/bench --site site1.local enable-scheduler
+2024-01-09 17:42:08,048 INFO /usr/local/bin/bench --site site1.local set-maintenance-mode off
+2024-01-09 17:42:18,536 INFO /usr/local/bin/bench setup production
+2024-01-09 17:42:18,537 WARNING superuser privileges required for this command
+2024-01-09 17:42:32,057 INFO /usr/local/bin/bench setup production
+2024-01-09 17:42:32,068 WARNING /usr/local/bin/bench setup production executed with exit code 2
+2024-01-09 17:42:43,825 INFO /usr/local/bin/bench setup nginx
+2024-01-09 17:43:01,152 INFO /usr/local/bin/bench use site site1.local
+2024-01-09 17:43:27,553 INFO /usr/local/bin/bench use site1.local
+2024-01-09 17:43:34,523 INFO /usr/local/bin/bench start
+2024-01-09 17:43:35,356 INFO /usr/local/bin/bench serve --port 8000
+2024-01-09 17:43:35,356 INFO /usr/local/bin/bench schedule
+2024-01-09 17:43:35,361 INFO /usr/local/bin/bench watch
+2024-01-09 17:43:35,362 INFO /usr/local/bin/bench worker
+2024-01-09 18:00:01,171 INFO /usr/local/bin/bench --verbose --site all backup
+2024-01-10 18:00:01,080 INFO /usr/local/bin/bench --verbose --site all backup
+2024-01-11 12:00:01,330 INFO /usr/local/bin/bench --verbose --site all backup
+2024-01-12 12:00:01,385 INFO /usr/local/bin/bench --verbose --site all backup
+2024-01-14 12:52:27,028 INFO /usr/local/bin/bench use site1.local
+2024-01-14 12:52:53,721 INFO /usr/local/bin/bench start
+2024-01-14 12:52:54,582 INFO /usr/local/bin/bench serve --port 8000
+2024-01-14 12:52:54,594 INFO /usr/local/bin/bench worker
+2024-01-14 12:52:54,605 INFO /usr/local/bin/bench schedule
+2024-01-14 12:52:54,606 INFO /usr/local/bin/bench watch
+2024-01-14 12:55:16,883 INFO /usr/local/bin/bench new-site test-site-1
+2024-01-14 13:00:56,184 INFO /usr/local/bin/bench setup nginx
+2024-01-14 13:01:03,718 INFO A newer version of bench is available: 5.19.0 → 5.20.0
+2024-01-14 13:01:07,808 INFO /usr/local/bin/bench start
+2024-01-14 13:01:08,555 INFO /usr/local/bin/bench serve --port 8000
+2024-01-14 13:01:08,563 INFO /usr/local/bin/bench watch
+2024-01-14 13:01:08,569 INFO /usr/local/bin/bench schedule
+2024-01-14 13:01:08,571 INFO /usr/local/bin/bench worker
+2024-01-16 00:00:00,739 INFO /usr/local/bin/bench --verbose --site all backup
